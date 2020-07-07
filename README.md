@@ -77,3 +77,19 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+##-- Laravel 7 + Vue CLI 4 --
+ - Followed by the https://github.com/yyx990803/laravel-vue-cli-3
+ # 1 remove existing frontend scaffold
+ - cmd: rm -rf package.json webpack.mix.js yarn.lock resources/js resources/sass public/js public/css
+ # 2 Create a Vue CLI 4 project in the Laravel app
+ - cmd: vue create frontend
+ # 3 Configure Vue project
+  - Create frontend/vue.config.js:
+
+ # Edit frontend/package.json:
+
+ # 4 Configure Laravel for single-page app.
+  - routes/web.php
+ # app/Http/Controllers/SpaController.php
+  - cmd: php artisan make:controller SpaController
